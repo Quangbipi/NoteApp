@@ -65,7 +65,7 @@ public class AddProject extends AppCompatActivity implements View.OnClickListene
 
         date0fWeekList=getDate();
         getDateOfMonth(cal.get(Calendar.MONTH));
-
+        //định hướng rcw
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         rcw_date.setLayoutManager(linearLayoutManager);
 
@@ -147,6 +147,7 @@ public class AddProject extends AppCompatActivity implements View.OnClickListene
         }
     }
 
+    //add thứ
     public ArrayList<String> getDate(){
         ArrayList<String> dateOfWeek1 = new ArrayList<>();
         dateOfWeek1.add("T2");
