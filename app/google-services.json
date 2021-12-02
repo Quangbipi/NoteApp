@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "299040467979",
+    "firebase_url": "https://note-4e46a-default-rtdb.firebaseio.com",
+    "project_id": "note-4e46a",
+    "storage_bucket": "note-4e46a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:299040467979:android:f5d62a54063380757eeb0e",
+        "android_client_info": {
+          "package_name": "com.quangminh.timeforlife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "299040467979-m4ipd9kqqmbtt564dk3kl4fhkbujelpj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.quangminh.timeforlife",
+            "certificate_hash": "5f44aeb46799f80a8ad19150ff9e10bf3dce78a7"
+          }
+        },
+        {
+          "client_id": "299040467979-1g5lcj3ha21top7njjv9d1ckqvss8dja.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxjw7_0W9aXfI7BOy9bnHr2T2jRt4oEd0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "299040467979-1g5lcj3ha21top7njjv9d1ckqvss8dja.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

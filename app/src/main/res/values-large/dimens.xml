@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="tvlogin" tools:ignore="MissingDefaultResource">372dp</dimen>
+    <dimen name="tvlogin2" tools:ignore="MissingDefaultResource">136dp</dimen>
+
+    <dimen name="maginTopLogin" tools:ignore="MissingDefaultResource">160dp</dimen>
+    <dimen name="maginViewLogin" tools:ignore="MissingDefaultResource">120dp</dimen>
+
+    <dimen name="fbmagin" tools:ignore="MissingDefaultResource">224dp</dimen>
+    <dimen name="maginXn" tools:ignore="MissingDefaultResource">312dp</dimen>
+
+    <!--    dimen atvAdd-->
+    <dimen name="ketthucmagin" tools:ignore="MissingDefaultResource">228dp</dimen>
+
+<!--    dimen setting-->
+    <dimen name="colorMagin" tools:ignore="MissingDefaultResource">96dp</dimen>
+    <dimen name="colorMagin2" tools:ignore="MissingDefaultResource">72dp</dimen>
+</resources>

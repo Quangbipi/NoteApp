@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardViewPr"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/workkk"
+        android:padding="2dp"
+        android:gravity="center"
+        android:drawablePadding="4dp"
+        android:textSize="12dp"
+        android:drawableLeft="@drawable/ic_ellipse_91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""/>
+</androidx.cardview.widget.CardView>

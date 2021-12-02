@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#A88BEA</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="misstion">#0D2525F9</color>
+    <color name="priority1">#D9D7FC</color>
+    <color name="priority2">#FBD7FC</color>
+    <color name="priority3">#D7ECFC</color>
+    <color name="priority4">#FCD7E2</color>
+    <color name="priority5">#C4C1C1</color>
+    <color name="text_1">#132A9F</color>
+    <color name="path_color">#CD817EEF</color>
+    <color name="color_main">#3131F8</color>
+    <color name="fill_color">#2525F9</color>
+    <color name="theme_2">#B70820</color>
+    <color name="theme_3">#9F137E</color>
+    <color name="theme_4">#095704</color>
+    <color name="theme_5">#AF7D06</color>
+    <color name="theme_6">#138C9F</color>
+    <color name="star">#FFC107</color>
+    <color name="cardColor">#52AEBBF9</color>
+    <color name="textCardColor">#D6D5D5</color>
+</resources>

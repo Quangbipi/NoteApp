@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/custom_bgk_while"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView">
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/constraintLayout"
+       android:layout_width="match_parent"
+       android:layout_height="100dp"
+       >
+
+       <RelativeLayout
+           android:id="@+id/bgk_project"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginStart="32dp"
+           android:background="@drawable/custom_bgk_item"
+           android:gravity="center_vertical"
+           android:padding="16dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+           <TextView
+
+               android:id="@+id/timer"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:drawableLeft="@drawable/ic_ellipse_2"
+               android:drawablePadding="8dp"
+               android:text="9:00-13:00"
+               android:textSize="24sp" />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentEnd="true">
+
+               <ImageView
+
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:layout_marginRight="6dp"
+                   android:src="@drawable/ic_notifi" />
+
+               <ImageView
+                   android:layout_marginRight="6dp"
+                   android:layout_width="24dp"
+                   android:layout_height="24dp"
+                   android:src="@drawable/ic_notifi_2" />
+
+               <ImageButton
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@android:color/transparent"
+                   android:src="@drawable/ic_kpi" />
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/work"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@+id/timer"
+               android:text="Họp team Mobile"
+               android:textColor="@color/black"
+               android:textSize="24sp" />
+
+       </RelativeLayout>
+
+       <ImageView
+           android:id="@+id/imageView"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="7dp"
+           android:src="@drawable/ic_checked"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <View
+           android:rotation="90"
+           android:background="@drawable/custom_view"
+           android:layout_width="76dp"
+           android:layout_height="0dp"
+           android:layout_marginStart="-22dp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/imageView" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>

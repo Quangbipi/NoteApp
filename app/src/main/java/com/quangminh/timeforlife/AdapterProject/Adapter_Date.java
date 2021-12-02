@@ -16,10 +16,13 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.AdapterListUpdateCallback;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.database.collection.LLRBNode;
+import com.quangminh.timeforlife.AddProject;
 import com.quangminh.timeforlife.Interface.DateOnClick;
+import com.quangminh.timeforlife.Interface.SetBMonth;
 import com.quangminh.timeforlife.R;
 
 import java.util.Calendar;
@@ -33,13 +36,28 @@ public class Adapter_Date extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     List<Integer> weekDayList;
 
     Calendar cal;
+    int x=0;
+    AddProject addProject;
+    private AdapterCallback mAdapterCallback;
 
     //set Data
+    public Adapter_Date(List<String> dateList, Context context, List<Integer> weekDayList, AdapterCallback adapterCallback) {
+        this.dateList = dateList;
+        this.context = context;
+        this.weekDayList = weekDayList;
+
+        try {
+            this.mAdapterCallback = ((AdapterCallback) context);
+        } catch (ClassCastException e) {
+            throw new ClassCastException("Activity must implement AdapterCallback.");
+        }
+        notifyDataSetChanged();
+    }
+
     public Adapter_Date(List<String> dateList, Context context, List<Integer> weekDayList) {
         this.dateList = dateList;
         this.context = context;
         this.weekDayList = weekDayList;
-        notifyDataSetChanged();
     }
 
     @NonNull
@@ -89,11 +107,19 @@ public class Adapter_Date extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
                 @SuppressLint("ResourceAsColor")
                 @Override
                 public void onClick(View view, int position, boolean isClick) {
-                    if(isClick){
 
+                    if(x==0){
+
+                        mAdapterCallback.onMethodCallback((String) dateVH.dayOfMonth.getText());
                         dateVH.cardDate.setBackground(ContextCompat.getDrawable(context, R.drawable.custom_button));
-                        dateVH.weekDay.setTextColor(R.color.text_checked);
-                        dateVH.dayOfMonth.setTextColor(R.color.text_checked);
+                        dateVH.weekDay.setTextColor(R.color.text_1);
+                        dateVH.dayOfMonth.setTextColor(R.color.color_main);
+                        x=1;
+                    }else if(x==1){
+                        dateVH.cardDate.setBackground(ContextCompat.getDrawable(context, R.drawable.custom_card));
+                        dateVH.weekDay.setTextColor(R.color.textCardColor);
+                        dateVH.dayOfMonth.setTextColor(R.color.textCardColor);
+                        x=0;
                     }
                 }
             });
@@ -190,6 +216,11 @@ public class Adapter_Date extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
             dayOfWeek = itemView.findViewById(R.id.day_of_month);
 
         }
+    }
+
+
+    public interface AdapterCallback{
+        void onMethodCallback(String date);
     }
 
 }

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Time For Life</string>
+    <string-array name="spiner_cycle">
+
+        <item>Theo ngày</item>
+        <item>Theo tuần</item>
+        <item>Hàng ngày</item>
+    </string-array>
+
+    <string-array name="spiner_minute">
+        <item>Trước 5 phút</item>
+        <item>Trước 10 phút</item>
+        <item>Trước 15 phút</item>
+        <item>Trước 20 phút</item>
+        <item>Trước 25 phút</item>
+        <item>Trước 30 phút</item>
+    </string-array>
+</resources>

@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_anchor="@+id/constraintLayout"
+    app:layout_anchorGravity="center"
+    android:background="#132A9F"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:background="@android:color/transparent"
+        android:id="@+id/back_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_back"
+         />
+
+    <TextView
+        android:id="@+id/them_moi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Thêm mới"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toEndOf="@+id/back_setting"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:text="Tháng 9, 2021"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_setting" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+    <androidx.core.widget.NestedScrollView
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_bgk_while"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView11" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/misstion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nhiệm vụ"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edt_misstion"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_bgk_misstion"
+                android:gravity="top"
+                android:hint="Nội dung công việc"
+                android:inputType="textImeMultiLine"
+                android:maxLines="40"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/misstion" />
+
+            <TextView
+                android:id="@+id/tv_time_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Bắt đầu"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edt_misstion" />
+
+            <TextView
+                android:id="@+id/tv_time_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="@dimen/ketthucmagin"
+                android:text="Kết thúc"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/tv_time_start"
+                app:layout_constraintTop_toBottomOf="@id/edt_misstion" />
+            <LinearLayout
+
+                android:layout_marginTop="8dp"
+                android:id="@+id/linear_time"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_time_end">
+                <TextView
+                    android:id="@+id/time_start"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="15:00"
+                    android:layout_marginRight="8dp"
+                    android:textStyle="bold"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/ic_hour"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_bgk_misstion"
+                    />
+                <TextView
+                    android:id="@+id/time_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="15:00"
+                    android:padding="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:drawableEnd="@drawable/ic_hour"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_bgk_misstion"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Mức độ ưu tiên"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear_time" />
+            <LinearLayout
+                android:id="@+id/liner_priority"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintTop_toBottomOf="@id/priority"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/quan_trong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Quan trọng"
+                        android:padding="24dp"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/custom_bgk_priority_1"
+                        android:clickable="true"
+                        />
+                    <TextView
+                        android:id="@+id/kquan_trong"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Không quan trọng"
+                        android:padding="24dp"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/custom_bgk_priority_3"
+                        android:clickable="true"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/khan_cap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Khẩn cấp"
+                        android:padding="24dp"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/custom_bgk_priority_3"
+                        android:clickable="true"
+                        />
+                    <TextView
+                        android:id="@+id/kkhan_cap"
+                        android:layout_marginTop="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Không khẩn cấp"
+                        android:padding="24dp"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:background="@drawable/custom_bgk_priority_2"
+                        android:clickable="true"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Nhắc nhở"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/liner_priority" />
+            <RelativeLayout
+                android:id="@+id/rlt_reimder"
+                android:layout_marginTop="8dp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_bgk_misstion"
+                app:layout_constraintTop_toBottomOf="@+id/reminder">
+
+                <ImageView
+                    android:id="@+id/alarm_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:src="@drawable/ic_alarm_clock" />
+                <Spinner
+
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="-12dp"
+                    android:id="@+id/spiner_minute"
+                    android:layout_marginLeft="32dp"
+                    android:layout_alignStart="@+id/alarm_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/alarm_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_alarm_bl"
+                    android:layout_below="@+id/spiner_minute"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:text="Alarm"
+                    />
+                <TextView
+                    android:id="@+id/notifi_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_notifi_bl"
+                    android:layout_below="@id/spiner_minute"
+                    android:layout_alignLeft="@id/alarm_tv"
+                    android:layout_marginLeft="193dp"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:text="Notification"/>
+                <TextView
+                    android:id="@+id/kpi_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/kpi_bl"
+                    android:layout_below="@+id/alarm_tv"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:text="Đánh giá KPI"
+                    />
+            </RelativeLayout>
+
+            <Button
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Lưu"
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlt_reimder" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Spinner
+        android:id="@+id/cycle_repetition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_setting" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
